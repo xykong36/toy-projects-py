@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import json
+import csv
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -54,9 +56,10 @@ headers = {
 data = '{"teacher_info":{"origin_country_id":["US"]},"teach_language":{"language":"english","is_native":1},"page_size":20,"page":1}'
 
 resp = requests.post('https://api.italki.com/api/v2/teachers', headers=headers, data=data)
-
+print(resp.status_code)
 resp_json = resp.json()
+test_list = [1,2,3].sort()
 
 
-resp.text
+resp.
 print(resp.text)
